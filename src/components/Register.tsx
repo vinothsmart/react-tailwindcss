@@ -44,28 +44,6 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex">
-      {/* Left Side - Image */}
-      <div className="hidden lg:flex flex-1 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-600/20 z-10"></div>
-        <img
-          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="Team collaboration"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/20 z-20"></div>
-        <div className="absolute bottom-10 left-10 right-10 z-30">
-          <div className="text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Start your journey with us
-            </h3>
-            <p className="text-xl opacity-90">
-              Create an account and unlock powerful features designed to
-              streamline your workflow and boost productivity.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Right Side - Register Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-md w-full space-y-8">
@@ -269,6 +247,27 @@ const Register = () => {
               </p>
             </div>
           </form>
+        </div>
+      </div>
+      {/* Left Side - Image */}
+      <div className="hidden lg:flex flex-1 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-600/20 z-10"></div>
+        <img
+          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Team collaboration"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20 z-20"></div>
+        <div className="absolute bottom-10 left-10 right-10 z-30">
+          <div className="text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Start your journey with us
+            </h3>
+            <p className="text-xl opacity-90">
+              Create an account and unlock powerful features designed to
+              streamline your workflow and boost productivity.
+            </p>
+          </div>
         </div>
       </div>
     </div>
