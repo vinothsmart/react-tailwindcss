@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import RegisterForm from "./components/RegisterForm";
+import LoginForm from "./components/LoginForm";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md">
+        <div className="mb-6 text-center">
+          <button
+            onClick={() => setIsLogin(true)}
+            className={`py-2 px-4 ${
+              isLogin ? "bg-blue-500" : "bg-gray-300"
+            } text-white rounded-md`}
+          >
+            Login
+          </button>
+          <button
+            onClick={() => setIsLogin(false)}
+            className={`py-2 px-4 ml-2 ${
+              !isLogin ? "bg-blue-500" : "bg-gray-300"
+            } text-white rounded-md`}
+          >
+            Register
+          </button>
+        </div>
+
+        {isLogin ? <LoginForm /> : <RegisterForm />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
