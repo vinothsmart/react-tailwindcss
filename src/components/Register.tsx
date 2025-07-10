@@ -33,6 +33,13 @@ const Register = () => {
     });
   };
 
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      role: e.target.value,
+    });
+  };
+
   const passwordsMatch = formData.password === formData.confirmPassword;
 
   return (
@@ -193,7 +200,7 @@ const Register = () => {
                     required
                     className="appearance-none relative block w-full pl-3 pr-10 py-3 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
                     value={formData.role}
-                    onChange={handleChange}
+                    onChange={handleSelectChange}
                   >
                     <option value="" disabled>
                       Select the roles
