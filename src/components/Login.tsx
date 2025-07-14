@@ -196,7 +196,11 @@ const Login = () => {
     // </div>
     <>
       <h1>Car Value : {updateHorseValue}</h1>
-      {message.length > 0 && <h1>Horse Value Updated : {message}</h1>}
+      {message.length > 0 && (
+        <h1>
+          {message} : {updateHorseValue}
+        </h1>
+      )}
       <input type="text" onChange={upDateHorseValue} value={horseValue} />
       <button onClick={handleButtonClick}>Click Me</button>
     </>
