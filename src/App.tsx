@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import NYL from "./components/NYL";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/nyl" element={<NYL />} />
           <Route path="/" element={<Navigate to="/login" replace />} />
         </Routes>
       </div>
