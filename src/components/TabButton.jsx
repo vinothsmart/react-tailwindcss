@@ -1,13 +1,9 @@
 import { memo, useCallback } from "react";
 
-const TabButton = ({ children }) => {
-  const handleClick = useCallback(() => {
-    console.log("Tab button clicked");
-  }, []);
-
+const TabButton = ({ children, onSelect }) => {
   return (
     <li>
-      <button onClick={handleClick}>{children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 };

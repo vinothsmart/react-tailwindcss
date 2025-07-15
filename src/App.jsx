@@ -4,6 +4,9 @@ import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
 
 function App() {
+  const handleTabSelection = useCallback(() => {
+    console.log("Tab button clicked");
+  }, []);
   return (
     <div>
       <Header />
@@ -24,10 +27,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleTabSelection}>Components</TabButton>
+            <TabButton onSelect={handleTabSelection}>JSX</TabButton>
+            <TabButton onSelect={handleTabSelection}>Props</TabButton>
+            <TabButton onSelect={handleTabSelection}>State</TabButton>
           </menu>
         </section>
       </main>
