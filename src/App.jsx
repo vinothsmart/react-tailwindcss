@@ -1,4 +1,5 @@
 import reactImg from "./assets/react-core-concepts.png";
+import componentsImg from "./assets/components.png";
 
 const reactDesctiptions = [
   "React is a JavaScript library for building user interfaces.",
@@ -24,12 +25,41 @@ const Header = () => {
   );
 };
 
+const CoreConcept = ({ title, description, image }) => {
+  return (
+    <li>
+      <img src={image} alt={title} className="w-16 h-16" />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  );
+};
+
 function App() {
   return (
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts of React</h2>
+          <ul>
+            <CoreConcept
+              title="React Components"
+              description="Components are the building blocks of a React application."
+              image={componentsImg}
+            />
+            <CoreConcept
+              title="JSX"
+              description="JSX is a syntax extension that allows mixing HTML with JavaScript."
+              image={componentsImg}
+            />
+            <CoreConcept
+              title="State and Props"
+              description="State is managed within the component, while props are passed to components."
+              image={componentsImg}
+            />
+          </ul>
+        </section>
       </main>
     </div>
   );
