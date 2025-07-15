@@ -1,5 +1,5 @@
 import reactImg from "./assets/react-core-concepts.png";
-import componentsImg from "./assets/components.png";
+import { REACT_CORE_CONCEPTS } from "./data";
 
 const reactDesctiptions = [
   "React is a JavaScript library for building user interfaces.",
@@ -43,21 +43,14 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts of React</h2>
           <ul>
-            <CoreConcept
-              title="React Components"
-              description="Components are the building blocks of a React application."
-              image={componentsImg}
-            />
-            <CoreConcept
-              title="JSX"
-              description="JSX is a syntax extension that allows mixing HTML with JavaScript."
-              image={componentsImg}
-            />
-            <CoreConcept
-              title="State and Props"
-              description="State is managed within the component, while props are passed to components."
-              image={componentsImg}
-            />
+            {REACT_CORE_CONCEPTS.map((concept, index) => (
+              <CoreConcept
+                key={index}
+                title={concept.title}
+                description={concept.description}
+                image={concept.image}
+              />
+            ))}
           </ul>
         </section>
       </main>
