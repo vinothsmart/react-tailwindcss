@@ -9,13 +9,14 @@ const getRandomInt = (max) => {
 };
 
 const Header = () => {
+  const description = reactDesctiptions[getRandomInt(2)];
   return (
     <header>
       <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
-        {reactDesctiptions[getRandomInt(2)]} React concepts you will need for
-        almost any app you are going to build!
+        {description} React concepts you will need for almost any app you are
+        going to build!
       </p>
     </header>
   );
