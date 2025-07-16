@@ -2,10 +2,11 @@ import { REACT_CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
+import { useCallback } from "react";
 
 function App() {
-  const handleTabSelection = useCallback(() => {
-    console.log("Tab button clicked");
+  const handleTabSelection = useCallback((selectedTab) => {
+    console.log(`Selected tab: ${selectedTab}`);
   }, []);
   return (
     <div>
@@ -27,11 +28,14 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleTabSelection}>Components</TabButton>
-            <TabButton onSelect={handleTabSelection}>JSX</TabButton>
-            <TabButton onSelect={handleTabSelection}>Props</TabButton>
-            <TabButton onSelect={handleTabSelection}>State</TabButton>
+            <TabButton onSelect={handleTabSelection("Components")}>
+              Components
+            </TabButton>
+            <TabButton onSelect={handleTabSelection("JSX")}>JSX</TabButton>
+            <TabButton onSelect={handleTabSelection("Props")}>Props</TabButton>
+            <TabButton onSelect={handleTabSelection("State")}>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </main>
     </div>
