@@ -2,16 +2,13 @@ import { REACT_CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState("Components");
-  const handleTabSelection = useCallback(
-    (selectedTab) => () => {
-      setSelectedTopic(selectedTab);
-    },
-    []
-  );
+  const handleTabSelection = (selectedTab) => () => {
+    setSelectedTopic(selectedTab);
+  };
   return (
     <div>
       <Header />
