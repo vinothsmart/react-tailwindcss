@@ -2,12 +2,16 @@ import { REACT_CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 function App() {
-  const handleTabSelection = useCallback((selectedTab) => {
-    console.log(`Selected tab: ${selectedTab}`);
-  }, []);
+  const [selectedTopic, setSelectedTopic] = useState("Components");
+  const handleTabSelection = useCallback(
+    (selectedTab) => () => {
+      setSelectedTopic(selectedTab);
+    },
+    []
+  );
   return (
     <div>
       <Header />
@@ -35,7 +39,7 @@ function App() {
             <TabButton onSelect={handleTabSelection("Props")}>Props</TabButton>
             <TabButton onSelect={handleTabSelection("State")}>State</TabButton>
           </menu>
-          Dynamic Content
+          {selectedTopic}
         </section>
       </main>
     </div>
