@@ -1,4 +1,3 @@
-import { memo } from "react";
 import reactImg from "../../assets/react-core-concepts.png";
 import "./Header.css";
 
@@ -26,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default memo(Header);
+export default Header;

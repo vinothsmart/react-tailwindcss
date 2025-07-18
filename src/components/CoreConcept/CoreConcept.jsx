@@ -1,4 +1,3 @@
-import { memo } from "react";
 import "./CoreConcept.css";
 
 const CoreConcept = ({ title, description, image }) => {
@@ -11,4 +10,4 @@ const CoreConcept = ({ title, description, image }) => {
   );
 };
 
-export default memo(CoreConcept);
+export default CoreConcept;

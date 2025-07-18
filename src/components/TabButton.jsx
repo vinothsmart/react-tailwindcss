@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 const TabButton = ({ children, onSelect }) => {
   return (
     <li>
@@ -8,4 +6,4 @@ const TabButton = ({ children, onSelect }) => {
   );
 };
 
-export default memo(TabButton);
+export default TabButton;
