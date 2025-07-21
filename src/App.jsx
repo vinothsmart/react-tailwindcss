@@ -36,7 +36,13 @@ function App() {
             <TabButton onSelect={handleTabSelection("Props")}>Props</TabButton>
             <TabButton onSelect={handleTabSelection("State")}>State</TabButton>
           </menu>
-          {selectedTopic}
+          <div id="tab-content">
+            <h3>{REACT_CORE_CONCEPTS}</h3>
+            <p></p>
+            <pre>
+              <code></code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
