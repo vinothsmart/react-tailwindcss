@@ -29,12 +29,30 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleTabSelection("components")}>
+            <TabButton
+              isActive={selectedTopic === "components"}
+              onSelect={handleTabSelection("components")}
+            >
               Components
             </TabButton>
-            <TabButton onSelect={handleTabSelection("jsx")}>JSX</TabButton>
-            <TabButton onSelect={handleTabSelection("props")}>Props</TabButton>
-            <TabButton onSelect={handleTabSelection("state")}>State</TabButton>
+            <TabButton
+              isActive={selectedTopic === "jsx"}
+              onSelect={handleTabSelection("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isActive={selectedTopic === "props"}
+              onSelect={handleTabSelection("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isActive={selectedTopic === "state"}
+              onSelect={handleTabSelection("state")}
+            >
+              State
+            </TabButton>
           </menu>
           {!selectedTopic ? (
             <p>Please select a topic.</p>
