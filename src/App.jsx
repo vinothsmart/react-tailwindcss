@@ -17,12 +17,7 @@ function App() {
           <h2>Core Concepts of React</h2>
           <ul>
             {REACT_CORE_CONCEPTS.map((concept, index) => (
-              <CoreConcept
-                key={index}
-                title={concept.title}
-                description={concept.description}
-                image={concept.image}
-              />
+              <CoreConcept key={index} {...concept} />
             ))}
           </ul>
         </section>
