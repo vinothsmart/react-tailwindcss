@@ -17,11 +17,7 @@ const Receipies = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {RECIPE_EXAMPLES.map((recipe) => (
-        <Receipe
-          key={recipe.id}
-          title={recipe.title}
-          ingredients={recipe.ingredients}
-        />
+        <Receipe key={recipe.id} {...recipe} />
       ))}
     </div>
   );
