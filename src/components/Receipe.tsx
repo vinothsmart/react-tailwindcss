@@ -1,11 +1,13 @@
+import { useId } from "React";
 const Receipe = ({ title, ingredients }) => {
+  const ingredientsID = useId();
   return (
     <div className="border p-4 rounded shadow">
       <h2>{title}</h2>
       <h3>Ingredients</h3>
       <ul>
-        {ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+        {ingredients?.map((ingredient) => (
+          <li key={ingredientsID + ingredient}>{ingredient}</li>
         ))}
       </ul>
     </div>
