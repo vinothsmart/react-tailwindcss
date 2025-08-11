@@ -3,7 +3,9 @@ const Receipe = ({ title, ingredients }) => {
   const ingredientsID = useId();
   return (
     <div className="border p-4 rounded shadow">
-      <h2>{title}</h2>
+      <h2>
+        {title} <button> Remove </button>
+      </h2>
       <h3>Ingredients</h3>
       <ul>
         {ingredients?.map((ingredient) => (
