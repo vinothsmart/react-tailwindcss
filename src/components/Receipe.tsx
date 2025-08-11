@@ -1,6 +1,6 @@
-const Receipe = ({ key, title, ingredients }) => {
+const Receipe = ({ title, ingredients }) => {
   return (
-    <div key={key} className="border p-4 rounded shadow">
+    <div className="border p-4 rounded shadow">
       <h2>{title}</h2>
       <h3>Ingredients</h3>
       <ul>
