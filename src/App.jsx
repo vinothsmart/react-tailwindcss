@@ -34,6 +34,12 @@ function App() {
     setShowAddRecipe(false);
   };
 
+  console.log(recipes);
+
+  const handleRemoveRecipe = (title) => () => {
+    setRecipes((prev) => prev.filter((recipe) => recipe.title !== title));
+  };
+
   return (
     <>
       <main>
@@ -42,7 +48,7 @@ function App() {
         {showAddRecipe && (
           <AddRecipeForm handleChange={handleChange} addReceipe={addReceipe} />
         )}
-        <Receipies recipes={recipes} />
+        <Receipies recipes={recipes} handleRemoveRecipe={handleRemoveRecipe} />
       </main>
     </>
   );

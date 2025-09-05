@@ -1,7 +1,7 @@
 import { useId } from "React";
 import Receipe from "./Receipe";
 
-const Receipies = ({ recipes }) => {
+const Receipies = ({ recipes, handleRemoveRecipe }) => {
   const recipeID = useId();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -11,6 +11,7 @@ const Receipies = ({ recipes }) => {
           key={recipeID + recipe.title}
           title={recipe.title}
           ingredients={recipe.ingredients}
+          handleRemoveRecipe={handleRemoveRecipe}
         />
       ))}
     </div>
