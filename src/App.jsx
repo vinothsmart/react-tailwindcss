@@ -1,4 +1,4 @@
-import { useState } from "React";
+import { useState } from "react";
 import Receipies from "./components/Receipies";
 import AddRecipeForm from "./components/AddRecipeForm";
 
