@@ -1,4 +1,4 @@
-import { useId } from "React";
+import { useId } from "react";
 const Receipe = ({ title, ingredients, handleRemoveRecipe }) => {
   const ingredientsID = useId();
   return (

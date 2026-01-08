@@ -1,4 +1,4 @@
-import { useId } from "React";
+import { useId } from "react";
 import Receipe from "./Receipe";
 
 const Receipies = ({ recipes, handleRemoveRecipe }) => {
